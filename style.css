@@ -1,0 +1,44 @@
+body{
+    background-color: blue;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.hidden{
+    display: none !important;
+}
+button:hover{
+    cursor: pointer;
+}
+#inicio{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+#iniciar{
+    display: block;
+    margin: 10px;
+    padding: 20px 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+}
+button:hover{
+    background-color: lightgray;
+}
+
+#menu{
+    flex-direction: row;
+}
+#menu button{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+button:disabled{
+    cursor: none;
+}
