@@ -1,55 +1,69 @@
-body{
+body {
     background-color: #153996;
     color: white;
-    font-family: FS Albert Arabic, monospace;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
 }
-.hidden{
+
+.hidden {
     display: none !important;
 }
-button:hover{
-    cursor: pointer;
-}
-#logo-principal{
+
+#logo-principal {
     width: 1000px;
     height: auto;
     max-width: 100%;
-    align-items: center;
 }
+
 @media (max-width: 768px) {
     #logo-principal {
         width: 120px;
     }
 }
-#inicio{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-#iniciar{
-    display: block;
-    margin: 10px;
-    padding: 20px 20px;
-    border-radius: 30px;
+
+button {
+    background-color: white;
     border: none;
-    font-size: 20px;
-}
-button:hover{
-    background-color: lightgray;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
 }
 
-#menu{
-    flex-direction: row;
+button:hover {
+    background-color: #f0f0f0;
 }
-#menu button{
-    margin: 10px;
+
+input, select {
+    width: 100%;
     padding: 10px;
-    border-radius: 10px;
+    margin: 10px 0;
     border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
 }
 
-button:disabled{
-    cursor: none;
+#container {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+#container > div {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+h1, h2, h3 {
+    margin: 15px 0;
+}
+
+li {
+    margin: 5px 0;
+    padding: 5px;
 }

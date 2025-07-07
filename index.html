@@ -16,18 +16,17 @@
         <img id="logo-principal" src="logo.png" alt="Logo do Projeto Cãoleta">
         <h3>SEJA BEM-VINDO(A) AO PROJETO CÃOLETA 🐶</h3>
         <button id="Sobre" onclick="Sobre()">Sobre</button>
-        <button id="Menu" onclick="menu()">Menu</button>
+        <button id="abrirMenu" onclick="menu()">Menu</button>
     </div>
 
     <div id="menu" class="hidden">
         <button onclick="mostrarDiv('cadastroUsuario')">Cadastrar usuário</button>
-        <button onclick="mostrarDiv('cadastroPet');selecionarUsuarios();">Cadastrar pet</button>
+        <button onclick="mostrarDiv('cadastroPet');selecionarUsuarios('selectUsuarioPet');">Cadastrar pet</button>
         <button onclick="mostrarDiv('cadastroPontoColeta')">Cadastrar ponto de coleta</button>
-        <button onclick="mostrarDiv('addPontos')">Adicionar pontos</button>
-        <button onclick="mostrarDiv('listarUsuarios')">Listar usuários</button>
-        <button onclick="mostrarDiv('listarPets')">Listar pets</button>
-        <button onclick="mostrarDiv('listarPontos')">Listar pontuação</button>
-        <button onclick="mostrarDiv('listarPontoColeta')">Listar pontos de coleta</button>
+        <button onclick="mostrarDiv('addPontos');selecionarUsuarios('selectUsuarioPontos');">Adicionar pontos</button>
+        <button onclick="mostrarDiv('listarUsuarios-pets'); listarUsuarios_pets();">Listar usuários e pets</button>
+        <button onclick="mostrarDiv('listarPontos'); listarPontuacao()">Listar pontuação</button>
+        <button onclick="mostrarDiv('listarPontoColeta');listarPontosColeta()">Listar pontos de coleta</button>
     </div>
     <div id="container">
         <div id="cadastroUsuario" class="hidden">
@@ -39,28 +38,31 @@
         </div>
         <div id="cadastroPet" class="hidden">
             <h3>Cadastro de pet</h3>
-            <select name="selectUsuario" id="selectUsuario">selecionar usuario:</select>
+            <label for="selectUsuarioPet">Selecionar Usuário:</label>
+            <select name="selectUsuario" id="selectUsuarioPet"></select>
             <input type="text" name="nomePet" id="nomePet" placeholder="nome do pet">
             <input type="text" name="raca" id="raca" placeholder="Raça do pet">
+            <button onclick="cadastrarPet()">cadastrar</button>
 
         </div>
         <div id="cadastroPontoColeta" class="hidden">
-            <h3>aqui será o cadastro dos pontos de coleta</h3>
+            <h3>Cadastro dos pontos de coleta</h3>
+            <input type="text" name="pontoDeColeta" id="pontoDeColeta" placeholder="Endereço do ponto de coleta">
+            <button onclick="cadastrarPontoColeta()">cadastrar</button>
         </div>
         <div id="addPontos" class="hidden">
-            <h3>aqui será onde vai adicionar pontos ao usuário</h3>
+            <h3>Adicionar pontos ao usuário</h3>
+            <select name="selectUsuarioPontos" id="selectUsuarioPontos"></select>
+            <input type="number" name="pontos" id="pontos" placeholder="Pontos" min="1">
+            <button onclick="addPontos()">adicionar</button>
         </div>
-        <div id="listarUsuarios" class="hidden">
-            <h3>aqui será listado todos os usuários</h3>
-        </div>
-        <div id="listarPets" class="hidden">
-            <h3>aqui irá listar todos os pets</h3>
-        </div>
+        <div id="listarUsuarios-pets" class="hidden"></div>
         <div id="listarPontos" class="hidden">
-            <h3>aqui irá listar a pontuação de todos os usuários</h3>
+            <h1>Pontuação 🏆</h1>
+            <ol id="listaPontos"></ol>
         </div>
         <div id="listarPontoColeta" class="hidden">
-            <h3>aqui irá listar todos os pontos de coleta</h3>
+
         </div>
     </div>
     <script src="index.js"></script>
