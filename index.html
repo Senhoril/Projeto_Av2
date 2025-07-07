@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Cãoleta</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header id="head">
-        <h1>Projeto Cãoleta 🐶</h1>
-        <hr>
+    <header>
+
     </header>
+
     <div id="inicio">
-        <h3>Seja bem-vindo ao nosso projeto Cãoleta</h3>
-        <button id="iniciar" onclick="iniciar()">iniciar</button>
+        <img id="logo-principal" src="logo.png" alt="Logo do Projeto Cãoleta">
+        <h3>SEJA BEM-VINDO(A) AO PROJETO CÃOLETA 🐶</h3>
+        <button id="Sobre" onclick="Sobre()">Sobre</button>
+        <button id="Menu" onclick="menu()">Menu</button>
     </div>
+
     <div id="menu" class="hidden">
         <button onclick="mostrarDiv('cadastroUsuario')">Cadastrar usuário</button>
-        <button onclick="mostrarDiv('cadastroPet')">Cadastrar pet</button>
+        <button onclick="mostrarDiv('cadastroPet');selecionarUsuarios();">Cadastrar pet</button>
         <button onclick="mostrarDiv('cadastroPontoColeta')">Cadastrar ponto de coleta</button>
         <button onclick="mostrarDiv('addPontos')">Adicionar pontos</button>
         <button onclick="mostrarDiv('listarUsuarios')">Listar usuários</button>
@@ -26,10 +31,18 @@
     </div>
     <div id="container">
         <div id="cadastroUsuario" class="hidden">
-            <h3>aqui será o cadastro do usuário</h3>
+            <h3>Cadastro de usuário</h3>
+
+            <input type="text" name="nome" id="nome" placeholder="nome">
+            <input type="text" name="cpf" id="cpf" placeholder="CPF">
+            <button onclick="cadastrarUsuario()">cadastrar</button>
         </div>
         <div id="cadastroPet" class="hidden">
-            <h3>aqui será o cadastro de pet</h3>
+            <h3>Cadastro de pet</h3>
+            <select name="selectUsuario" id="selectUsuario">selecionar usuario:</select>
+            <input type="text" name="nomePet" id="nomePet" placeholder="nome do pet">
+            <input type="text" name="raca" id="raca" placeholder="Raça do pet">
+
         </div>
         <div id="cadastroPontoColeta" class="hidden">
             <h3>aqui será o cadastro dos pontos de coleta</h3>
@@ -52,4 +65,5 @@
     </div>
     <script src="index.js"></script>
 </body>
+
 </html>
